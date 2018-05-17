@@ -8,8 +8,8 @@ import React, { Component } from 'react'
   render() {
     return (
       <div className="results">
-        <h2>{this.props.results.name}</h2>
-        <img src={this.props.results.description} alt=""/>
+        <h2>{this.props.results.title}</h2>
+        <a href={this.props.results.url} alt=""><p>{this.props.results.ups}</p></a>
       </div>
     )
   }

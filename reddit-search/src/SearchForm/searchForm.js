@@ -16,6 +16,7 @@ class RedditSearch extends Component {
   handleSubmit(e) {
     e.preventDefault()
     superagent.get(`https://www.reddit.com/r/${this.state.searchFormBoard}.json?limit=${this.state.searchFormLimit}`)
+    .then(console.log)
     .then(res => this.props.setAppState({results: res.body}))
     .catch(console.error)
   }
